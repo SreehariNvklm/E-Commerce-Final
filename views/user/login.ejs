@@ -1,0 +1,23 @@
+<form action="/login" method="post">
+    <div class="p-5">
+        <h1 align="center">Login</h1>
+        <% if(loginErr){ %>
+            <p style="color: crimson;"><%= loginErr %></p>
+        <% } %>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="Email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="Password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="mb-3">
+            <a href="/signup">Create new account ?</a>
+        </div>
+        <div style="display: flex; justify-content: flex-end">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+</form>

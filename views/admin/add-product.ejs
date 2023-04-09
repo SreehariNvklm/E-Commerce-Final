@@ -1,0 +1,34 @@
+<section>
+    <div class="container mt-3">
+        <form action="add-product/" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="nameOfProduct" placeholder="Name of the product">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Category select</label>
+                <input type="text" class="form-control" id="exampleFormControlInput2" name="categoryOfProduct" placeholder="Name of the category">
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Price</label>
+                <input type="text" class="form-control" id="exampleFormControlInput3" name="priceOfProduct" placeholder="Price of the product">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description</label>
+                <input type="text" class="form-control" id="exampleFormControlInput4" name="descriptionOfProduct" placeholder="Description of the product">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Image</label>
+                <img class="card-img-top" src="" style="width: 80px;height: 100px;" id="imgView">
+                <input name="productImg" type="file" class="form-control-file" onchange="viewImage(event)" id="exampleFormControlFile1">
+            </div>
+            <div><button type="submit" class="btn btn-outline-success">Edit Product</button></div>
+        </form>
+    </div>
+</section>
+<script>
+    function viewImage(event){
+        document.getElementById('imgView').src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>

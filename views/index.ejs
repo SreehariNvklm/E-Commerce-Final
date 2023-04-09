@@ -1,0 +1,23 @@
+
+  <section>
+    <div class="container mt-3">
+      <div class="row">
+        <% products.forEach((product)=>{ %>
+        <div class="col-md-3 p-3" style="width: 250px; height: 400px;">
+          <div class="card text-dark bg-white">
+            <img class="card-img-top"
+            style="height: 400px; width: 200px;"
+              src="/product-images/<%= product._id %>.jpg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= product.name %></h5>
+              <p class="card-text"><%= product.description %></p>
+              <a href="/add-to-cart/<%= product._id %>" class="btn btn-dark">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+  

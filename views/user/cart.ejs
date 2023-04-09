@@ -1,0 +1,36 @@
+<%if(productArr.length==0){%>
+  <h3>Cart empty</h3>
+  <%}else{%>
+    <section>
+      <div class="container">
+        <table class="mt-5">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Title</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%productArr.forEach((product)=>{%>
+              <tr>
+                <td><img class="card-img-top" style="height: 70px; width: 70px;"
+                    src="/product-images/<%= product._id %>.jpg" alt="Card image cap"></td>
+                <td>
+                  <h5 class="card-title">
+                    <%= product.name %>
+                  </h5>
+                </td>
+                <td>
+                  <p><%= product.price %></p>
+                </td>
+                <td>
+                  <a href="/remove-cart-item/<%= product._id %>" class="btn btn-danger">Remove</a>
+                </td>
+              </tr>
+              <%});%>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <%}%>
