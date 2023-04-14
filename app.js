@@ -11,7 +11,7 @@ var db= require('./config/connection');
 var session = require('express-session');
 var app = express();
 const mongoose = require('mongoose');
-const dbURI = 'mongodb+srv://SJR:SreehariNavaikulam%402004@cluster0.h27exfs.mongodb.net/shopping?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://SJR:<pswd>@cluster0.h27exfs.mongodb.net/shopping?retryWrites=true&w=majority';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
